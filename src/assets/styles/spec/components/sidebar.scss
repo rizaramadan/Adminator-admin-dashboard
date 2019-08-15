@@ -173,6 +173,8 @@
 // @Sidebar Menu
 // ---------------------------------------------------------
 
+$sidebar-focus: $md-blue-50;
+
 .sidebar-menu {
   @include clearfix;
   border-right: 1px solid $border-color;
@@ -199,6 +201,17 @@
       top: calc(50% - 4px);
       width: 8px;
     }
+    &.active {
+        background-color: $sidebar-focus;
+        border-right: 5px solid $default-primary;
+    }
+    &:hover {
+        background-color: $sidebar-focus;
+        &.active {
+            border-right: 5px solid $default-primary;
+        }
+    }
+
   }
 
   li {
@@ -251,7 +264,6 @@
       &:hover,
       &:focus {
         color: $default-dark;
-        background-color: lighten($default-primary, 50%);
         text-decoration: none;
 
         .icon-holder {
@@ -282,7 +294,6 @@
 
               &:hover,
               &:focus {
-                background-color: lighten($default-primary, 50%);
                 color: $default-dark;
               }
             }
