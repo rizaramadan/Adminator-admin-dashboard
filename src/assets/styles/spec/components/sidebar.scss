@@ -251,6 +251,7 @@
       &:hover,
       &:focus {
         color: $default-dark;
+        background-color: lighten($default-primary, 50%);
         text-decoration: none;
 
         .icon-holder {
@@ -281,7 +282,7 @@
 
               &:hover,
               &:focus {
-                background-color: transparent;
+                background-color: lighten($default-primary, 50%);
                 color: $default-dark;
               }
             }
